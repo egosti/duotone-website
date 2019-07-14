@@ -1,0 +1,103 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #2A97A6;
+}
+
+@-webkit-keyframes GradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes GradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes GradientBackground { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.page-container {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 20px;
+	background: linear-gradient(270deg, #ffe5e9, #ffe5e9);
+	background-size: 400% 400%;
+	-webkit-animation: GradientBackground 10s infinite; /* Safari 4+ */
+  -moz-animation:    GradientBackground 10s infinite; /* Fx 5+ */
+  -o-animation:      GradientBackground 10s infinite; /* Opera 12+ */
+  animation:         GradientBackground 10s infinite; /* IE 10+, Fx 29+ */
+}
+
+.text-container {
+	width: 75%;
+	height: 75%;
+	margin: auto;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+
+.text-container-2 {
+	display: flex;
+	flex-direction: row;
+}
+
+.text-container-left {
+	width: 60%;
+	margin-right: 20px;
+}
+
+.text-container-right {
+	width: 40%;
+	margin-left: 20px;
+}
+
+.title {
+	font-family: 'Staatliches', cursive;
+	font-weight: 800;
+	font-size: 120px;
+}
+
+.about-title {
+	font-family: 'Staatliches', cursive;
+	font-weight: 800;
+	font-size: 40px;
+}
+
+.about-text {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.image {
+	object-fit: cover;
+	width: 70%;
+}
+
+.link {
+	text-decoration: none;
+	color: #FF6A32;
+	/*background-color: #FFEDE7;*/
+	transition: .25s linear;
+}
+
+.link:hover {
+	background-color: #FF6A32;
+	color: white;
+	transition: .25s linear;
+}
