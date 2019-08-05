@@ -23,15 +23,26 @@ html, body {
     100%{background-position:0% 50%}
 }
 
-.page-container {
+.contact-bar {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 18px;
 	position: absolute;
-	top:0;
+	top: 20px;
+	z-index: 2;
+	left: 20px;
+}
+
+.page-container {
+	width: 100vw;
+	height: 90vh;
+	position: absolute;
+	/*top: 0;*/
 	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: auto;
 	padding: 20px;
-	background: linear-gradient(270deg, #ffe5e9, #ffe5e9);
+	/*background: linear-gradient(270deg, #ffe5e9, #ffe5e9);*/
 	background-size: 400% 400%;
 	-webkit-animation: GradientBackground 10s infinite; /* Safari 4+ */
   -moz-animation:    GradientBackground 10s infinite; /* Fx 5+ */
@@ -63,6 +74,7 @@ html, body {
 .text-container-right {
 	width: 40%;
 	margin-left: 20px;
+	text-align: center;
 }
 
 .title {
@@ -85,8 +97,9 @@ html, body {
 }
 
 .image {
+	margin-top: 20px;
 	object-fit: cover;
-	width: 70%;
+	width: 80%;
 }
 
 .link {
@@ -100,4 +113,14 @@ html, body {
 	background-color: #FF6A32;
 	color: white;
 	transition: .25s linear;
+}
+
+@media screen and (max-width: 1000px) {
+	.text-container-2 {
+		flex-direction: column-reverse;
+	}
+
+	.image {
+		margin: 20px;
+	}
 }
