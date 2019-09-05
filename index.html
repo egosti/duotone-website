@@ -1,38 +1,97 @@
 <html>
 	<head>
 		<title>Emily Gosti</title>
-		<style type="text/css">
-	    @font-face {
-	        font-family: "Gotham";
-	        src: url(assets/fonts/Gotham-Bold.otf) format("opentype");
-	        font-weight: 800;
-	    }
-	    @font-face {
-	        font-family: "Gotham";
-	        src: url(assets/fonts/Gotham-Book.otf) format("opentype");
-	    }
-    </style>
+		<link rel="stylesheet" type="text/css" href="LineMaker/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="LineMaker/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="LineMaker/css/decolines.css" />
+		<link rel="stylesheet" type="text/css" href="LineMaker/css/pater.css" />
+
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Barlow|Hind|PT+Sans|Staatliches|Titillium+Web&display=swap" rel="stylesheet">
+		<link rel="icon" href="assets/img/charmander.jpg">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="assets/script/script.js"></script>
 	</head>
 
 	<body>
+		<script src="LineMaker/js/anime.min.js"></script>
+		<script src="LineMaker/js/main.js"></script>
+
+		<script>
+			(function() {
+				var lineMaker = new LineMaker({
+						// position: if fixed the lines container will have fixed position.
+						position: 'fixed',
+						// The lines settings:
+						// 
+						// top, left, width, height: numerical for pixels or string for % and viewport units. Examples: 2 || '20%' || '50vw'.
+						// color: the (bg)color of the line.
+						// hidden: defines if the line is rendered initially or hidden by default.
+						// animation: animation properties for the line
+						// 		duration: animation speed.
+						// 		easing: animation easing (animejs easing. To see all possible values console animejs.easings).
+						// 		delay: animation delay.
+						// 		direction: line animation direction. Possible values: TopBottom || BottomTop || LeftRight || RightLeft || CenterV || CenterH.
+						lines: [
+							{top: 0, left: '10%', width: 1, height: '100vh', color: '#c7c6c6', hidden: true, animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }},
+							{top: 0, left: '30%', width: 1, height: '100vh', color: '#c7c6c6', hidden: true, animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }},
+							{top: 0, left: '50%', width: 1, height: '100vh', color: '#c7c6c6', hidden: true, animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }},
+							{top: 0, left: '70%', width: 1, height: '100vh', color: '#c7c6c6', hidden: true, animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }},
+							{top: 0, left: '90%', width: 1, height: '100vh', color: '#c7c6c6', hidden: true, animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }},
+						]
+				});
+				
+				setTimeout(function() {
+					lineMaker.animateLinesIn();
+				}, 500);
+			})();
+			(function() {
+			var lineMaker2 = new LineMaker({
+					parent: { element: document.body, position: 'append' },
+					position: 'fixed',
+					lines: [
+						{top: 0, left: '-10%', width: '20vw', height: '100vh', color: '#F3C1B8', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 0, direction: 'BottomTop' }},
+						{top: 0, left: '10%', width: '20vw', height: '100vh', color: '#297373', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 0, direction: 'TopBottom' }},
+						{top: 0, left: '30%', width: '20vw', height: '100vh', color: '#F3C1B8', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 150, direction: 'BottomTop' }},
+						{top: 0, left: '50%', width: '20vw', height: '100vh', color: '#297373', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 300, direction: 'TopBottom' }},
+						{top: 0, left: '70%', width: '20vw', height: '100vh', color: '#F3C1B8', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 450, direction: 'BottomTop' }},
+						{top: 0, left: '90%', width: '20vw', height: '100vh', color: '#297373', hidden: false, animation: { duration: 1000, easing: 'easeInOutCirc', delay: 600, direction: 'TopBottom' }}
+					]
+			});
+			
+			setTimeout(function() {
+				lineMaker2.animateLinesOut();
+			}, 500);
+		})();
+		</script>
+
+
 		<!-- <div class="contact-bar">linkedin &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; instagram &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; emily.gosti@gmail.com</div> -->
 		<div class="page-container">
 				<div class="text-container">
 				<div class="title">Hi, I'm Emily Gosti.</div>
 				<div class="text-container-2">
 					<div class="text-container-left">
-						<div class="about-title">I'm a rising senior at UC Berkeley.</div>
+						<div class="about-title">I'm a senior at UC Berkeley.</div>
 						<div class="about-text">I'm currently pursuing an Electrical Engineering and Computer Sciences degree. At Berkeley, I've been involved as a <a href="https://cs61c.org/" class="link" target="_blank">CS61C</a> uGSI, leading a web team at <a href="https://innovativedesign.club/" class="link" target="_blank">Innovative Design</a>, and piloting the EE16A <a href="https://csmberkeley.github.io/#/" class="link" target="_blank">Computer Science Mentors</a> curriculum. I also studied abroad at <a href="https://www.ucl.ac.uk/" class="link" target="_blank">University College London</a> in Spring 2019.</div>
-						<div class="about-text">Right now, I'm a software engineering intern at Stripe working on the dashboard, in addition to being a 2019 <a href="http://fellows.kleinerperkins.com/meet-the-fellows" class="link" target="_blank">KP engineering fellow</a>. In the past, I've interned at Square and Google.</div>
-						<div class="about-text">In my spare time, I enjoy playing tennis, binging TV shows, seeking out great design, and rooting for the Golden State Warriors.</div>
+						<div class="about-text">Last summer, I was a software engineering intern at Stripe working on the dashboard, in addition to being a 2019 <a href="http://fellows.kleinerperkins.com/meet-the-fellows" class="link" target="_blank">KP engineering fellow</a>. In the past, I've interned at Square and Google.</div>
+						<div class="about-text">I'm also a tennis player, Golden State Warriors fan, and world geography enthusiast.</div>
 					</div>
 					<div class="text-container-right">
-						<img src="assets/img/duotone2.png" class="image">
+						<img src="assets/img/emily.jpg" class="image">
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- <section class="content content--grid" id="grid-contents">
+				<p>Steamed brewed ristretto frappuccino, half and half grinder.</p>
+				<p>Pumpkin spice, plunger pot cinnamon, body cinnamon aromatic.</p>
+				<p>Fair trade, single shot half and half aged rich.</p>
+				<p>Caramelization robusta, cup kopi-luwak foam.</p>
+				<p>Steamed brewed ristretto frappuccino, half and half grinder.</p>
+				<p>Pumpkin spice, plunger pot cinnamon, body cinnamon aromatic.</p>
+				<p>Fair trade, single shot half and half aged rich.</p>
+				<p>Caramelization robusta, cup kopi-luwak foam.</p>
+			</section> -->
 	</body>
 </html>

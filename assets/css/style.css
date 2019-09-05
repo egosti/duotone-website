@@ -3,24 +3,10 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	color: #2A97A6;
-}
-
-@-webkit-keyframes GradientBackground {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes GradientBackground {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
-@keyframes GradientBackground { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+	/*color: #2A97A6;*/
+	/*color: #363636;*/
+	color: #3E4E50;
+	letter-spacing: 1px;
 }
 
 .contact-bar {
@@ -33,32 +19,28 @@ html, body {
 }
 
 .page-container {
-	width: 100vw;
-	height: 90vh;
-	position: absolute;
+	/*width: 100vw;*/
+	height: 30vh;
+	/*position: absolute;*/
 	/*top: 0;*/
 	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: auto;
 	padding: 20px;
-	/*background: linear-gradient(270deg, #ffe5e9, #ffe5e9);*/
 	background-size: 400% 400%;
-	-webkit-animation: GradientBackground 10s infinite; /* Safari 4+ */
-  -moz-animation:    GradientBackground 10s infinite; /* Fx 5+ */
-  -o-animation:      GradientBackground 10s infinite; /* Opera 12+ */
-  animation:         GradientBackground 10s infinite; /* IE 10+, Fx 29+ */
 }
 
 .text-container {
 	width: 75%;
 	height: 75%;
 	margin: auto;
-	top:0;
+	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	position: absolute;
+	display: none;
 }
 
 .text-container-2 {
@@ -80,13 +62,17 @@ html, body {
 .title {
 	font-family: 'Staatliches', cursive;
 	font-weight: 800;
-	font-size: 120px;
+	font-size: 112px;
+	letter-spacing: 3px;
+	color: #f3c1b8;
 }
 
 .about-title {
 	font-family: 'Staatliches', cursive;
 	font-weight: 800;
 	font-size: 40px;
+	letter-spacing: 3px;
+	color: #f3c1b8;
 }
 
 .about-text {
@@ -104,23 +90,52 @@ html, body {
 
 .link {
 	text-decoration: none;
-	color: #FF6A32;
+	color: #3f3f3f;
+	/*color: #FFEDE7;*/
 	/*background-color: #FFEDE7;*/
-	transition: .25s linear;
+	background-color: #fcedea;
+	/*transition: .25s linear;*/
+
+	background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #3eadad 50%);
+  background-position: -0% 0;
+  background-size: 200% auto;
+  /*color: #222;*/
+  /*font-size: 1.75em;*/
+  /*line-height: 1.15em;*/
+  /*text-decoration: none;*/
+  transition: background-position 0.5s ease-out;
 }
 
 .link:hover {
-	background-color: #FF6A32;
+	/*background-color: #FF6A32;*/
+	/*background-color: white;*/
+	/*transition: .25s linear;*/
 	color: white;
-	transition: .25s linear;
+	background-position: -99.99% 0;
+}
+
+#grid-contents {
+	font-family: 'Titillium Web', sans-serif;
 }
 
 @media screen and (max-width: 1000px) {
+	.text-container-left {
+		width: 100%;
+	}
+
 	.text-container-2 {
 		flex-direction: column-reverse;
 	}
 
+	.about-title {
+		font-size: 60px;
+	}
+
+	.about-text {
+		font-size: 40px;
+	}
+
 	.image {
-		margin: 20px;
+		display: none;
 	}
 }
