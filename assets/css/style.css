@@ -29,6 +29,7 @@ html, body {
 	margin: auto;
 	padding: 20px;
 	background-size: 400% 400%;
+	display: none;
 }
 
 .text-container {
@@ -40,7 +41,6 @@ html, body {
 	left: 0;
 	right: 0;
 	position: absolute;
-	display: none;
 }
 
 .text-container-2 {
@@ -116,6 +116,8 @@ html, body {
 
 #grid-contents {
 	font-family: 'Titillium Web', sans-serif;
+	/*position: absolute;*/
+	top: 100vh;
 }
 
 @media screen and (max-width: 1000px) {

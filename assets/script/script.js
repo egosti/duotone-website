@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	$('.text-container').delay(2000).fadeIn(800);
+	$('.page-container').delay(2000).fadeIn(800);
 });

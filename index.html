@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Barlow|Hind|PT+Sans|Staatliches|Titillium+Web&display=swap" rel="stylesheet">
-		<link rel="icon" href="assets/img/charmander.jpg">
+		<link rel="icon" href="assets/img/charmander.png">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="assets/script/script.js"></script>
 	</head>
@@ -20,18 +20,7 @@
 		<script>
 			(function() {
 				var lineMaker = new LineMaker({
-						// position: if fixed the lines container will have fixed position.
 						position: 'fixed',
-						// The lines settings:
-						// 
-						// top, left, width, height: numerical for pixels or string for % and viewport units. Examples: 2 || '20%' || '50vw'.
-						// color: the (bg)color of the line.
-						// hidden: defines if the line is rendered initially or hidden by default.
-						// animation: animation properties for the line
-						// 		duration: animation speed.
-						// 		easing: animation easing (animejs easing. To see all possible values console animejs.easings).
-						// 		delay: animation delay.
-						// 		direction: line animation direction. Possible values: TopBottom || BottomTop || LeftRight || RightLeft || CenterV || CenterH.
 						lines: [
 							{top: 0, left: '10%', width: 1, height: '100vh', color: '#c7c6c6', hidden: true, animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }},
 							{top: 0, left: '30%', width: 1, height: '100vh', color: '#c7c6c6', hidden: true, animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }},
@@ -65,8 +54,6 @@
 		})();
 		</script>
 
-
-		<!-- <div class="contact-bar">linkedin &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; instagram &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; emily.gosti@gmail.com</div> -->
 		<div class="page-container">
 				<div class="text-container">
 				<div class="title">Hi, I'm Emily Gosti.</div>
@@ -82,16 +69,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- <section class="content content--grid" id="grid-contents">
-				<p>Steamed brewed ristretto frappuccino, half and half grinder.</p>
-				<p>Pumpkin spice, plunger pot cinnamon, body cinnamon aromatic.</p>
-				<p>Fair trade, single shot half and half aged rich.</p>
-				<p>Caramelization robusta, cup kopi-luwak foam.</p>
-				<p>Steamed brewed ristretto frappuccino, half and half grinder.</p>
-				<p>Pumpkin spice, plunger pot cinnamon, body cinnamon aromatic.</p>
-				<p>Fair trade, single shot half and half aged rich.</p>
-				<p>Caramelization robusta, cup kopi-luwak foam.</p>
+			<!-- <section class="content content--grid" id="grid-contents">
+				<p>Check out my LinkedIn</p>
+				<p>Shoot me an email to emily.gosti@gmail.com!</p>
+				<p>My Github is linked here</p>
 			</section> -->
+		</div>
 	</body>
 </html>
