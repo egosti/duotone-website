@@ -536,16 +536,16 @@ a:hover, a:focus { color: #666c7b; }
 	.content--grid p {
 		margin: 0 0 2em;
 		width: 20%;
-		margin-left: 10%;
+		margin-left: 8%;
 		text-align: right;
 		position: relative;
 	}
 	.content--grid p:nth-child(odd) {
-		margin-left: 50%;
+		margin-left: 52%;
 		text-align: left;
 	}
 	.content--grid p:nth-child(3n) {
-		margin-left: 70%;
+		margin-left: 72%;
 		text-align: left;
 	}
 	.demo-5 .content--grid p:nth-child(3n) {
