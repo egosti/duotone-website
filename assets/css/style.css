@@ -96,28 +96,35 @@ html, body {
 	width: 80%;
 }
 
+#img-caption-1 {
+    position: absolute;
+    left: 31.5%;
+    margin-top: 9%;
+}
+
+#img-caption-2 {
+    position: absolute;
+    left: 10.1%;
+    top: 50%;
+}
+
+#img-caption-3 {
+    position: absolute;
+    left: 70.1%;
+    top: 40%;
+}
+
 .link {
 	text-decoration: none;
 	color: #3f3f3f;
-	/*color: #FFEDE7;*/
-	/*background-color: #FFEDE7;*/
 	background-color: #fcedea;
-	/*transition: .25s linear;*/
-
 	background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #3eadad 50%);
-  background-position: -0% 0;
-  background-size: 200% auto;
-  /*color: #222;*/
-  /*font-size: 1.75em;*/
-  /*line-height: 1.15em;*/
-  /*text-decoration: none;*/
-  transition: background-position 0.5s ease-out;
+    background-position: -0% 0;
+    background-size: 200% auto;
+    transition: background-position 0.5s ease-out;
 }
 
 .link:hover {
-	/*background-color: #FF6A32;*/
-	/*background-color: white;*/
-	/*transition: .25s linear;*/
 	color: white;
 	background-position: -99.99% 0;
 }
@@ -125,22 +132,58 @@ html, body {
 .grid-container {
 	font-family: 'Titillium Web', sans-serif;
 	position: absolute;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	display: none;
 }
 
 .grid-contents {
 	position: absolute;
+	object-fit: cover;
+	width: 19.9vw;
+	height: 20vw;
+}
+
+#grid-contact {
 	top: 10%;
 	left: 52%;
+}
+
+#grid-image-1 {
+    width: 19.9vw;
+	height: 20vw;
+	left: 30.1%;
+	margin-top: 10%;
+	overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+#grid-image-2 {
+	width: 19.9vw;
+	height: 20vw;
+	object-fit: cover;
+	left: 10.1%;
+	top: -5%;
+	overflow: hidden;
+    position: relative;
+}
+
+#grid-image-3 {
+	width: 19.9vw;
+	height: 20vw;
+	object-fit: cover;
+	left: 70.1%;
+	top: -55%;
+	overflow: hidden;
+    position: relative;
 }
 
 
 #wrapper {
   display: table;
-  width:100%;
-  height:10vh;
+  width: 100%;
+  height: 10vh;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -150,15 +193,15 @@ html, body {
 #wrapper-inner {
   display: table-cell;
   vertical-align:middle;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 #scroll-down {
     display: block;
     position: relative;
     padding-top: 79px;
-  text-align:center;
+    text-align: center;
 }
 
 .arrow-down {
@@ -189,11 +232,10 @@ html, body {
     display: block;
     text-transform: uppercase;
     color: #f3c1b8;
-  /*font-family: Helvetica Neue, Helvetica, Arial;*/
-  font-size:14px;
-  font-weight:bold;
-  letter-spacing:.1em;
-  display: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    display: none;
 }
 #scroll-down::before {
     -webkit-animation: elasticus 2s cubic-bezier(1, 0, 0, 1) infinite;
@@ -418,6 +460,37 @@ html, body {
     }
 }
 
+
+/* img follow cursor */
+
+.img-container {
+  transition: transform .1s ease;
+}
+
+.img-container:hover {
+  transform: scale(1.08);
+  /*
+  Change the scale value as much as you want to change the amount of zoom on hover.
+  */
+}
+
+.img-container img {
+  opacity: .7;
+  transform: translate(0,0);
+  /*
+  Change the opacity value to change how "faded" you want the image to appear when it is not hovered.
+  */
+  transition: opacity .25s ease-in-out;
+}
+
+.img-container img:hover {
+  opacity: 1;
+}
+
+
+
+/* responsive */
+
 @media screen and (max-width: 1000px) {
 	.text-container-left {
 		width: 100%;
@@ -442,4 +515,12 @@ html, body {
 	.wrapper {
 		display: none;
 	}
+
+    .grid-contents {
+        display: none;
+    }
+
+    #img-caption-1 {
+        display: none;
+    }
 }
