@@ -3,8 +3,6 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	/*color: #2A97A6;*/
-	/*color: #363636;*/
 	color: #3E4E50;
 	letter-spacing: 1px;
 }
@@ -19,10 +17,7 @@ html, body {
 }
 
 .page-container {
-	/*width: 100vw;*/
 	height: 100vh;
-	/*position: absolute;*/
-	/*top: 0;*/
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -104,14 +99,14 @@ html, body {
 
 #img-caption-2 {
     position: absolute;
-    left: 10.1%;
-    top: 50%;
+    left: 11.5%;
+    margin-top: 19%;
 }
 
 #img-caption-3 {
     position: absolute;
-    left: 70.1%;
-    top: 40%;
+    left: 71.5%;
+    margin-top: 29%;
 }
 
 .link {
@@ -131,7 +126,8 @@ html, body {
 
 .grid-container {
 	font-family: 'Titillium Web', sans-serif;
-	position: absolute;
+	/*position: absolute;*/
+    position: relative;
 	width: 100vw;
 	height: 100%;
 	display: none;
@@ -145,6 +141,7 @@ html, body {
 }
 
 #grid-contact {
+    position: absolute;
 	top: 10%;
 	left: 52%;
 }
@@ -155,7 +152,7 @@ html, body {
 	left: 30.1%;
 	margin-top: 10%;
 	overflow: hidden;
-    position: relative;
+    position: absolute;
     display: inline-block;
 }
 
@@ -164,9 +161,9 @@ html, body {
 	height: 20vw;
 	object-fit: cover;
 	left: 10.1%;
-	top: -5%;
+	margin-top: 20%;
 	overflow: hidden;
-    position: relative;
+    position: absolute;
 }
 
 #grid-image-3 {
@@ -174,9 +171,9 @@ html, body {
 	height: 20vw;
 	object-fit: cover;
 	left: 70.1%;
-	top: -55%;
+	margin-top: 30%;
 	overflow: hidden;
-    position: relative;
+    position: absolute;
 }
 
 
@@ -508,19 +505,12 @@ html, body {
 		font-size: 40px;
 	}
 
+    .page-container {
+        height: 250vh;
+        padding-bottom: 100px;
+    }
+
 	.image {
 		display: none;
 	}
-
-	.wrapper {
-		display: none;
-	}
-
-    .grid-contents {
-        display: none;
-    }
-
-    #img-caption-1 {
-        display: none;
-    }
 }
